@@ -1,0 +1,11 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config EXAMPLES_LSM303DLHC
+	bool "LSM303DLHC reader example"
+	default n
+	depends on SENSORS_LSM303DLHC_I2C
+	---help---
+		Enable the LSM303DLHC reader example
