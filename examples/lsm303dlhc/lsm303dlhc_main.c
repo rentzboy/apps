@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 {
   int fd;
   struct lsm303dlhc_acc_data_s data;
-  uint32_t prev;
 
   fd = open(ACC_DEVPATH, O_RDONLY);
   if (fd < 0)
@@ -59,7 +58,6 @@ int main(int argc, char *argv[])
       return -1;
     }
 
-  prev = 0;
   for (; ; )
     {
       int ret;
