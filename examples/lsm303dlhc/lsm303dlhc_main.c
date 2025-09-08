@@ -36,7 +36,8 @@
  * Pre-processor Definitions
  ****************************************************************************/
 
-#define ACC_DEVPATH      "/dev/acc"
+#define ACC_DEVPATH         "/dev/acc"
+#define LSM303DLHC_DEVPATH  "/dev/lsm303dlh"
 
 /****************************************************************************
  * Public Functions
@@ -51,10 +52,10 @@ int main(int argc, char *argv[])
   int fd;
   struct lsm303dlhc_acc_data_s data;
 
-  fd = open(ACC_DEVPATH, O_RDONLY);
+  fd = open(LSM303DLHC_DEVPATH, O_RDONLY);
   if (fd < 0)
     {
-      printf("Device %s open failure. %d\n", ACC_DEVPATH, fd);
+      printf("Device %s open failure. %d\n", LSM303DLHC_DEVPATH, fd);
       return -1;
     }
 
