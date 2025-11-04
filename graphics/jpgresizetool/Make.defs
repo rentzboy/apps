@@ -1,5 +1,5 @@
 ############################################################################
-# apps/tee/optee_supplicant/Make.defs
+# apps/graphics/jpgresizetool/Make.defs
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -20,6 +20,6 @@
 #
 ############################################################################
 
-ifneq ($(CONFIG_OPTEE_SUPPLICANT),)
-CONFIGURED_APPS += $(APPDIR)/tee/optee_supplicant
+ifneq ($(CONFIG_GRAPHICS_JPGRESIZETOOL),)
+CONFIGURED_APPS += $(APPDIR)/graphics/jpgresizetool
 endif
